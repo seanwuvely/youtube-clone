@@ -4,13 +4,14 @@ import styles from "./video_detail.module.css";
 const VideoDetail = ({ video, video: { snippet } }) => (
   <section className={styles.detail}>
     <iframe
+      title="youtube-video-player"
       className={styles.video}
       id="player"
       type="text/html"
       width="100%"
       height="500px"
       src={`http://www.youtube.com/embed/${video.id}`}
-      frameborder="0"
+      frameBorder="0"
       allowFullScreen
     ></iframe>
     <h2>{snippet.title}</h2>
